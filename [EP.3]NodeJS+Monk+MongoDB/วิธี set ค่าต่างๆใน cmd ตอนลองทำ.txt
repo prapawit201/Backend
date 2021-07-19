@@ -1,0 +1,30 @@
+สร้าง Folder โดยการใช้ cmd ด้วยวิธี Express Generator ด้วยวิธี
+ 1. npm install -g express-generator
+ 2. express --view-ejs NodejsBasic
+ 3. หลังจากนั้น เข้าไปใน VS เเล้วใช้ npm install เเล้ว npm start
+
+โดยสามารถเข้าด้วย localhost port 3000
+
+----------------------------------------------
+
+มีการใช้ ckeditor เข้าไป สามารถโหลดได้ใน google เลย โดยใช้เป็น ckeditor4
+หลังจากนั้นพอเข้ามา โดยเราจะเลือก ckeditor cdn สามารถcopy script ลงไปยังในหน้าที่จะโชว์ได้เลย
+
+----------------------------------------------
+
+มีการใช้ Express-validator เพื่อเป็นตัวเช็คความถูกต้องว่าเรามีการใส่ข้อมูลส่งไปไหม
+โดยต้องติดตั้ง โดยหาได้จากใน google หรือ npm install --save express-validator 
+
+----------------------------------------------
+
+การใช้ Monk เพื่อบันทึกข้อมูลไปยัง DB (หรือมีอีกตัวคือ mongoose)
+โดยเราจะต้อง create DB ใน MongoDB compass โดยจากใน folder นี้ตั้งว่า
+Database name : ToturialDB
+collection name : blogs
+หลังจากตั้งเสร็จเเล้ว จะ set เป็น default ได้เลย
+เเล้วจากนั้นติดตั้งตัว monk โดยหาโหลดมาจาก google ได้เลยหรือจะใช้ npm install --save monk
+
+-----------------------------------------------
+
+มีการใช้ Express message สำหรับเเจ้งเตือนว่าเรากรอกข้อมูลเสร็จเรียบร้อยเเล้ว(หรือจะใช้เป็น sweet alert ก็ได้)
+โดยจะต้องมีการติดตั้งสามารถโหลดได้จาก google หรือ npm install express-messages เเล้วจะต้องทำเพิ่มมคือ npm install connect-flash
