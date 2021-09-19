@@ -29,12 +29,12 @@ io.on("connect", (socket) => {
   socket.on("newuser", (name) => {
     let newUser = name;
     console.log(` ${newUser} : connected`);
-
     socket.on("disconnect", () => {
       console.log("user disconnected");
-      io.emit("disconnect", `${newUser} disconnected`);
+      socket.disconnect();
     });
   });
+
   socket.on("chat message", (msg) => {
     io.emit("chat message", msg);
   });
