@@ -13,6 +13,15 @@ app.get('/' , (req, res) => {
             message : "Hello world!"
       })
 })
+
+app.get('/data' , (req,res) => {
+      res.status(200).json({
+            data : {
+                  name: "Babe",
+                  age : 22
+            }
+      })
+})
 app.listen(PORT, () => {
   console.log(`Server start port : ${PORT}`)
 });
