@@ -3,6 +3,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import logging from "./logging";
 import config from "./config";
+import sampleRoutes from './routes/samples'
 
 const NAMESPACE = "Server";
 const router = express();
@@ -47,16 +48,7 @@ router.use((req, res , next) => {
 });
 
 //route
-router.use((req, res, next) => {
-  const error = new Error("not found");
-
-  return res.status(404).json({
-    message: error.message,
-  });
-
-
-
-});
+router.use(sampleRoutes)
 
 //create server
 const httpServer = http.createServer(router);
